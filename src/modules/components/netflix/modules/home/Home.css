@@ -1,0 +1,20 @@
+.box{
+    position: relative;
+}
+
+.input {
+    border-radius:2rem;
+    border: 1px solid #000000;
+    background-color:#000000;
+    width: 1rem;
+    height: 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.box:hover input{
+    border: 2px solid #ffff;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    width: 15rem;
+    height: 2.5rem;
+}
+

@@ -1,0 +1,82 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --space: 2rem;
+  display: grid;
+  align-content: center;
+  gap: var(--space);
+  width: 100%;
+}
+
+
+.marquee {
+    --duration: 60s;
+    --gap: var(--space);
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .marquee__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+      animation-play-state: paused;
+    }
+  }
+  
+  
+  
+  @media (min-width: 700px) {
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%; /* O ajusta el ancho según tus necesidades */
+      margin-top: 50px
+    }
+  }
+  
+  /* Estilo para pantallas más pequeñas que 700px de ancho */
+  @media (max-width: 699px) {
+    footer {
+      position: static; /* O cualquier posición que desees en pantallas más pequeñas */
+    }
+  }
+  @media (max-width: 499px)  {
+    .marquee {
+      display: none;
+    }
+    
+  }
+  
+  
+  .marquee--borders {
+    padding-block: 0rem;
+  }
+  
+  .marquee--reverse .marquee__group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration) / -2);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
