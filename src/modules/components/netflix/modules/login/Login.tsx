@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import FooterLogin from './FooterLogin';
 import AnimationLogin from './animationLogin';
-//import useValidation from './handler/validation';
+import useLoginHandler from './handler/useLogin';
 const Login = () => {
- // const { handleSubmit, validated,handleChange,formData } = useValidation();
+  
+const { handleForm,handleLogin,form } = useLoginHandler();
   return (
     <> 
       <AnimationLogin/>
@@ -13,13 +13,14 @@ const Login = () => {
                     <div className="mb-2 block bg-zinc-700 rounded-md ">
                           <label htmlFor="UserEmail"className=" relative block overflow-hidden rounded-md px-3 pt-3 shadow-sm">
                               <input
+                                id="email"
                                 type="email"
-                                id="UserEmail"
-                                placeholder=""
-                                minLength={12} 
-                                maxLength={30}
+                                name="email" 
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+                                minLength={11}
+                                maxLength={30}
                                 required 
+                                value={ form.email } onChange={ handleForm }
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -31,13 +32,14 @@ const Login = () => {
                     <div className="mb-2 block  bg-zinc-700 rounded-md">
                           <label htmlFor="UserEmail"className="relative block overflow-hidden rounded-md px-3 pt-3 shadow-sm">
                               <input
-                                type="Password"
-                                id="UserPassword"
-                                placeholder=""
-                                minLength={8} 
-                                maxLength={30} 
+                                id="password"
+                                type="password" 
+                                name="password"
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-                                required  
+                                minLength={8}
+                                maxLength={15}
+                                required 
+                                value={ form.password } onChange={ handleForm } 
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -46,7 +48,7 @@ const Login = () => {
                               </span>
                           </label>
                     </div>
-                      <Link to={'./SelectAccount'} className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</Link>
+                      <button onClick={ handleLogin } className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</button>
                           <div className="flex items-center justify-between gap-2">
                               <input className="text-black  h-5 w-5 rounded-md border-none
                                 bg-zinc-700 shadow-sm focus:border-transparent focus:outline-none focus:ring-0" 
