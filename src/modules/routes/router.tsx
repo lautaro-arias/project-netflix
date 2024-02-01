@@ -27,7 +27,7 @@ const Urls = () => {
             return setAuthenticated(false);
         };
 
-       /// console.log("error")
+       //console.log("error")
         checkAuthentication();
 
     }, []);
@@ -39,17 +39,17 @@ return (
                     <Route path="/"  element={ authenticated ? <Navigate to="/SelectAccount" /> : <Login /> }  />
                       
                 </Routes>  
-
                 <Routes>
-                    <Route path="/SelectAccount"  element={<SelectAccount/>} />
-                </Routes>  
+                    <Route path="/SelectAccount"  element={  authenticated ? <SelectAccount/> : ''} />
+                </Routes>
+ 
                 
                 <Routes>
-                    <Route path="/home"  element={<Cards/>} />
+                    <Route path="/home"  element={  authenticated ? <Cards/> : ''} />
                 </Routes>
 
                 <Routes>
-                    <Route path="/trailer"  element={<ContentTrailer/>} />
+                    <Route path="/trailer"  element={  authenticated ? <ContentTrailer/> : ''} />
                 </Routes>
         </MainProvider> 
 </Router>
