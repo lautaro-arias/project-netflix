@@ -3,6 +3,7 @@ import useCountdownTimer from '../../utils/CountdownTimer';
 import useCarga from '../../utils/Carga';
 import 'animate.css/animate.min.css';
 
+
 const Banner = () => {
     const { days,hours,minutes,seconds } =useCountdownTimer()
     const { isLoading } =useCarga()

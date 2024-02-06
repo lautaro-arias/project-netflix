@@ -1,9 +1,7 @@
 import FooterLogin from './FooterLogin';
 import AnimationLogin from './animationLogin';
-import useLoginHandler from './handler/useLogin';
 const Login = () => {
   
-const { handleForm,handleLogin,form } = useLoginHandler();
   return (
     <> 
       <AnimationLogin/>
@@ -20,7 +18,6 @@ const { handleForm,handleLogin,form } = useLoginHandler();
                                 minLength={11}
                                 maxLength={30}
                                 required 
-                                value={ form.email } onChange={ handleForm }
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -39,7 +36,6 @@ const { handleForm,handleLogin,form } = useLoginHandler();
                                 minLength={8}
                                 maxLength={15}
                                 required 
-                                value={ form.password } onChange={ handleForm } 
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -48,7 +44,7 @@ const { handleForm,handleLogin,form } = useLoginHandler();
                               </span>
                           </label>
                     </div>
-                      <button onClick={ handleLogin } className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</button>
+                      <button  className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</button>
                           <div className="flex items-center justify-between gap-2">
                               <input className="text-black  h-5 w-5 rounded-md border-none
                                 bg-zinc-700 shadow-sm focus:border-transparent focus:outline-none focus:ring-0" 
@@ -64,7 +60,7 @@ const { handleForm,handleLogin,form } = useLoginHandler();
                         </div>
               </form>
         </div>
-      <FooterLogin/>
+  <FooterLogin/>
     </>
   )
 }
