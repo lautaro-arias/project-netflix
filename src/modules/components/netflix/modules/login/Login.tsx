@@ -11,9 +11,10 @@ const Login = () => {
                     <div className="mb-2 block bg-zinc-700 rounded-md ">
                           <label htmlFor="UserEmail"className=" relative block overflow-hidden rounded-md px-3 pt-3 shadow-sm">
                               <input
-                                id="email"
+                                id="UserEmail"
                                 type="email"
                                 name="email" 
+                                placeholder="Username"
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
                                 minLength={11}
                                 maxLength={30}
@@ -27,11 +28,12 @@ const Login = () => {
                           </label>
                       </div>
                     <div className="mb-2 block  bg-zinc-700 rounded-md">
-                          <label htmlFor="UserEmail"className="relative block overflow-hidden rounded-md px-3 pt-3 shadow-sm">
+                          <label htmlFor="UserPassword"className="relative block overflow-hidden rounded-md px-3 pt-3 shadow-sm">
                               <input
-                                id="password"
+                                id="UserPassword"
                                 type="password" 
                                 name="password"
+                                placeholder="UserPassword"
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
                                 minLength={8}
                                 maxLength={15}
