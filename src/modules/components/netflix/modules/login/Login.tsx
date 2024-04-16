@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import FooterLogin from './FooterLogin';
 import AnimationLogin from './animationLogin';
 const Login = () => {
@@ -16,9 +17,6 @@ const Login = () => {
                                 name="email" 
                                 placeholder="Username"
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-                                minLength={11}
-                                maxLength={30}
-                                required 
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -35,9 +33,6 @@ const Login = () => {
                                 name="password"
                                 placeholder="UserPassword"
                                 className=" text-white peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-                                minLength={8}
-                                maxLength={15}
-                                required 
                                 />
                               <span
                                 className="absolute start-3 top-3 -translate-y-1/2 text-xs text-zinc-400 transition-all 
@@ -46,7 +41,7 @@ const Login = () => {
                               </span>
                           </label>
                     </div>
-                      <button  className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</button>
+                      <Link to={"/selectAccount"}  className="text-white border-none btn rounded-md bg-red-600 outline-none hover:bg-red-600 " type="submit">Iniciar sesion</Link>
                           <div className="flex items-center justify-between gap-2">
                               <input className="text-black  h-5 w-5 rounded-md border-none
                                 bg-zinc-700 shadow-sm focus:border-transparent focus:outline-none focus:ring-0" 
