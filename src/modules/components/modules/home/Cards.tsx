@@ -6,8 +6,8 @@ import Banner from './Banner';
 import Footer from './Footer';
 import useCarga from "../../utils/Carga";
 import 'animate.css/animate.min.css';
-
-
+import './Home.css'
+import IconShow from '../../icon/icons';
 
 const Cards = () => {
   const {handleClickredirectToMovie,movies,loadMoreMovies} = useMainHandler()
@@ -25,6 +25,8 @@ const Cards = () => {
       <section className="text-white body-font bg-black z-10 bg-[url('/src/modules/assets/SelectAcount1.jpeg')] ">
             <div className="container px-5 py-24 mx-auto">
             <h1 className="text-2xl font-bold sm:text-3xl border-4 border-transparent border-b-red-800 mb-2">Lo mas visto</h1>
+          
+        {/*<IconShow/>*/}
                   <div className="grid grid-cols-1 gap-2 text-center sm:grid-cols-2 pt-4 pb-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  mx-auto">
                                       { movies.map((movie) => ( 
                                         <div className="group relative block animate__animated animate__backInLeft mx-auto"key={movie.id}>
@@ -32,7 +34,7 @@ const Cards = () => {
                                                         <img
                                                         alt={`Imagen de la película ${movie.title}`}
                                                         src={`${BASE_PATH_IMG}/w600_and_h900_bestv2${movie.poster_path}`}
-                                                        className="saturate-100 absolute h-full  w-full cursor-pointer inset-0  object-cover  transition-opacity group-hover:opacity-50 hover:h-full "
+                                                        className="img  group-hover:saturate-100 absolute h-full  w-full cursor-pointer inset-0  object-cover  transition-opacity group-hover:opacity-50 hover:h-full "
                                                         />
                                                     <div className="relative p-4 text-start sm:p-6 lg:p-8">
                                                         <p className="text-xl text-center font-bold text-white sm:text-2xl">{movie.title}</p>

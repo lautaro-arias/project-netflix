@@ -1,4 +1,4 @@
-import hopenNav from '../../../../assets/hopenNav.jpg'
+import hopenNav from '../../../assets/hopenNav.jpg'
 
 import './Home.css'
 const Nav = () => {

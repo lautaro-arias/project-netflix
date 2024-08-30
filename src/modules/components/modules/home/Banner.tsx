@@ -1,4 +1,4 @@
-import home from '../../../../assets/home.png';
+import home from '../../../assets/home.png';
 import useCountdownTimer from '../../utils/CountdownTimer';
 import useCarga from '../../utils/Carga';
 import 'animate.css/animate.min.css';

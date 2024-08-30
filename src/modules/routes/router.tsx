@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Cards from '../components/netflix/modules/home/Cards';
-import ContentTrailer from '../components/netflix/modules/home/ContentTrailer';
-import { MainProvider } from '../components/netflix/handlers/useMainHandler';
-import Login from '../components/netflix/modules/login/Login';
-import SelectAccount from '../components/netflix/modules/login/SelectAccount';
+import Cards from '../components/modules/home/Cards';
+import ContentTrailer from '../components/modules/home/ContentTrailer';
+import { MainProvider } from '../components/handlers/useMainHandler';
+import Login from '../components/modules/login/Login';
+import SelectAccount from '../components/modules/login/SelectAccount';
 
 const Urls = () => {
     
